@@ -41,6 +41,7 @@ namespace LoggingMiddleware
             }
 
             app.UseHttpsRedirection();
+            app.UseLogging();
             app.UseMvc();
         }
     }
