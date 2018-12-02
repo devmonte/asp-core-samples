@@ -34,6 +34,7 @@ namespace LoggingMiddleware.Helpers
 
                     await _next(context);
 
+                    //log response
                     _logger.LogDebug(await FormatResponse(context.Response));
                     await responseBody.CopyToAsync(originalBodyStream);
                 }
@@ -52,7 +53,6 @@ namespace LoggingMiddleware.Helpers
 
             response.Body.Seek(0, SeekOrigin.Begin);
 
-            //Return the string for the response, including the status code (e.g. 200, 404, 401, etc.)
             return $"{response.StatusCode}: {text}";
         }
 

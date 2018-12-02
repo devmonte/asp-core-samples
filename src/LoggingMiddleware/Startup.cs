@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using LoggingMiddleware.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -41,7 +42,7 @@ namespace LoggingMiddleware
             }
 
             app.UseHttpsRedirection();
-            app.UseLogging();
+            app.UseMiddleware<DetailedLoggingMiddleware>();
             app.UseMvc();
         }
     }
