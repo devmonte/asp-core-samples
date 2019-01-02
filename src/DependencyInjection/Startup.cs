@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DependencyInjection.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +26,14 @@ namespace DependencyInjection
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddTransient<IExampleService, ExampleOneService>();
+            services.AddTransient<IExampleService, ExampleTwoService>();
+            services.AddTransient<IExampleService, ExampleThreeService>();
+
+            services.AddTransient(typeof(IExampleGenericService<>), typeof(ExampleGenericOneService));
+            services.AddTransient(typeof(IExampleGenericService<>), typeof(ExampleGenericTwoService));
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
