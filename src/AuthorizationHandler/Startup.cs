@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using LoggingMiddleware.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -12,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace LoggingMiddleware
+namespace AuthorizationHandler
 {
     public class Startup
     {
@@ -42,7 +41,6 @@ namespace LoggingMiddleware
             }
 
             app.UseHttpsRedirection();
-            app.UseMiddleware<DetailedLoggingMiddleware>();
             app.UseMvc();
         }
     }
