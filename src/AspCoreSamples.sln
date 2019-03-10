@@ -9,7 +9,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuthorizationHandler", "Aut
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoggingMiddleware", "LoggingMiddleware\LoggingMiddleware.csproj", "{178DEC06-10C8-4677-8AF0-4C6C8D67C04A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericHost", "GenericHost\GenericHost.csproj", "{2FDED36F-8E74-4BA4-964C-32439CCA3EDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericHost", "GenericHost\GenericHost.csproj", "{2FDED36F-8E74-4BA4-964C-32439CCA3EDE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{E1D9E3E8-A683-42D7-8A74-E3F9020E7BD7}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filters", "Filters\Filters.csproj", "{FEC21263-7B59-493B-B7C2-8CEBD3D25168}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +40,10 @@ Global
 		{2FDED36F-8E74-4BA4-964C-32439CCA3EDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2FDED36F-8E74-4BA4-964C-32439CCA3EDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2FDED36F-8E74-4BA4-964C-32439CCA3EDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEC21263-7B59-493B-B7C2-8CEBD3D25168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEC21263-7B59-493B-B7C2-8CEBD3D25168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEC21263-7B59-493B-B7C2-8CEBD3D25168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEC21263-7B59-493B-B7C2-8CEBD3D25168}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
