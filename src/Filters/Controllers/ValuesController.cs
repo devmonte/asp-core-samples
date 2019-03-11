@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Filters.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Filters.Controllers
 {
+    [ServiceFilter(typeof(ActionFilterExample))]
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
