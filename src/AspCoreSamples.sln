@@ -20,7 +20,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Filters", "Filters\Filters.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore", "EFCore\EFCore.csproj", "{51321511-FE92-4735-BDD5-752E5766D884}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Configuration", "Configuration\Configuration.csproj", "{3C6978D4-6122-4A11-BB60-C63B7F57134A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Configuration", "Configuration\Configuration.csproj", "{3C6978D4-6122-4A11-BB60-C63B7F57134A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileStreaming", "FileStreaming\FileStreaming.csproj", "{EF1C7332-5BD1-4B63-91F3-B1E08CFD362F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -56,6 +58,10 @@ Global
 		{3C6978D4-6122-4A11-BB60-C63B7F57134A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C6978D4-6122-4A11-BB60-C63B7F57134A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C6978D4-6122-4A11-BB60-C63B7F57134A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF1C7332-5BD1-4B63-91F3-B1E08CFD362F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF1C7332-5BD1-4B63-91F3-B1E08CFD362F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF1C7332-5BD1-4B63-91F3-B1E08CFD362F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF1C7332-5BD1-4B63-91F3-B1E08CFD362F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
