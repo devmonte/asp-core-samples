@@ -1,4 +1,6 @@
-List of samples:
+List of usefull(atleast for me :) ) ASP.NET Core 3.0 samples:
+- configuration
+	- [Dosc about configuration](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/?view=aspnetcore-3.0)
 - logging middleware
 - authorization handler
 - MVC filtering
