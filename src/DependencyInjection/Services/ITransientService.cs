@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DependencyInjection.Models
+namespace DependencyInjection.Services
 {
-    public class ExampleTwoModel : IExampleModel
+    public interface ITransientService : ICustomService
     {
         
     }

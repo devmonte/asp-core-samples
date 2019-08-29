@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DependencyInjection.Models
+namespace DependencyInjection.Services
 {
-    public interface IExampleModel
+    public interface ISuperService
     {
-        
+        string GenerateValue();
     }
 }

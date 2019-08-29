@@ -4,8 +4,10 @@ List of usefull(atleast for me :) ) ASP.NET Core 3.0 samples:
 - logging middleware
 	- [Docs about middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/?view=aspnetcore-3.0)
 	- [Docs about writing custom middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-3.0)
-Not updated yet to .NET Core 3.0:
+- DI
+	- [Docs about DI](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.0)
 
+Not updated yet to .NET Core 3.0:
 - authorization handler
 - MVC filtering
 - generic host

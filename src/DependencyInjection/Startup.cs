@@ -1,16 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using DependencyInjection.Services;
+﻿using DependencyInjection.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
+using Microsoft.Extensions.Hosting;
 
 namespace DependencyInjection
 {
@@ -26,19 +19,18 @@ namespace DependencyInjection
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddControllers();
 
-            services.AddTransient<IExampleService, ExampleOneService>();
-            services.AddTransient<IExampleService, ExampleTwoService>();
-            services.AddTransient<IExampleService, ExampleThreeService>();
+            services.Add(ServiceDescriptor.Transient<ISuperService, SuperService>());
+            
+            services.AddSingleton<ISingletonService, SingletonService>();
+            services.AddScoped<IScopedService, ScopedService>();
+            services.AddTransient<ITransientService, TransientService>();
 
-            services.AddTransient(typeof(IExampleGenericService<>), typeof(ExampleGenericOneService));
-            services.AddTransient(typeof(IExampleGenericService<>), typeof(ExampleGenericTwoService));
-
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -51,7 +43,8 @@ namespace DependencyInjection
             }
 
             app.UseHttpsRedirection();
-            app.UseMvc();
+            app.UseRouting();
+            app.UseEndpoints(endpoints => { endpoints.MapDefaultControllerRoute(); });
         }
     }
 }
