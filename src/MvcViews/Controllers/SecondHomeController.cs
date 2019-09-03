@@ -20,7 +20,11 @@ namespace MvcViews.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            ViewBag.MyName = "Devmonte";
+            ViewData["YourName"] = "Neo";
+
+            var person = new Person {Age = 30, Name = "Smith"};
+            return View(person);
         }
 
         public IActionResult Privacy()

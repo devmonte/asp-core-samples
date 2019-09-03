@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Person
+@{
     ViewData["Title"] = "Home Page";
 }
 
@@ -9,5 +10,6 @@
 
 <div>
     <p>Below is partial view :)</p>
-    <partial name="_ExamplePartialView"/>
+    <partial name="_ExamplePartialView" />
+    <partial name="_ExamplePartialViewWithData" model="Model" />
 </div>

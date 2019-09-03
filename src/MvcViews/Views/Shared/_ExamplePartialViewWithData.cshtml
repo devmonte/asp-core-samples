@@ -1,0 +1,16 @@
+﻿@model Person
+
+<p> What's my name? @ViewBag.MyName</p>
+<p> What's your name? @ViewData["YourName"]</p>
+<p>Data about some person: name: @Model.Name, age: @Model.Age</p>
+<div class="row">
+    <div class="col-6">
+
+        <button class="btn btn-info">Click me</button>
+    </div>
+
+    <div class="col-6">
+
+        <button class="btn btn-danger">Click me</button>
+    </div>
+</div>
