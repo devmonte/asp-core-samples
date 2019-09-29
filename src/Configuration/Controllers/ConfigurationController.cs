@@ -10,33 +10,15 @@ namespace Configuration.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class WeatherForecastController : ControllerBase
+    public class ConfigurationController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-            "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };
-
-        private readonly ILogger<WeatherForecastController> _logger;
+        private readonly ILogger<ConfigurationController> _logger;
         private readonly IConfiguration _configuration;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IConfiguration configuration)
+        public ConfigurationController(ILogger<ConfigurationController> logger, IConfiguration configuration)
         {
             _logger = logger;
             _configuration = configuration;
-        }
-
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
-        {
-            var rng = new Random();
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
-            })
-            .ToArray();
         }
 
         [HttpGet("/config")]
@@ -47,6 +29,20 @@ namespace Configuration.Controllers
             _configuration.GetSection("starship").Bind(starship);
             var fromMemory = _configuration.GetSection("array");
             return $"Location: {location}, starship: {starship.Name}, array: {fromMemory.GetSection("entries").GetSection("0").Value}";
+        }
+
+        [HttpGet("/envconfig")]
+        public string GetEnvConfig()
+        {
+
+            var fromDevSetting = _configuration["Nadpisana"];
+            var fromSetting = _configuration["NieNadpisana"];
+
+            var env = _configuration["Environment"];
+            var secret = _configuration["SECRET"];
+            var userSecret = _configuration["VarFromSecret"];
+
+            return $"Env: {env}"; 
         }
     }
 }
