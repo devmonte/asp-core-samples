@@ -24,6 +24,7 @@ namespace OptionsPattern.Controllers
         [HttpGet]
         public IActionResult Get()
         {
+
             var integer = _optionsMonitor.CurrentValue.SomeInteger;
             var someString = _optionsMonitor.CurrentValue.SomeString;
             return Ok(someString);

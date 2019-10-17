@@ -29,13 +29,13 @@ namespace Configuration
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration((hostingContext, config) =>
-            {
-                config.SetBasePath(Directory.GetCurrentDirectory());
-                config.AddInMemoryCollection(arrayDict);
-                config.AddJsonFile(
-                    "starship.json", optional: false, reloadOnChange: false);
-            })
+            //.ConfigureAppConfiguration((hostingContext, config) =>
+            //{
+            //    //config.SetBasePath(Directory.GetCurrentDirectory());
+            //    //config.AddInMemoryCollection(arrayDict);
+            //    config.AddJsonFile(
+            //        "starship.json", optional: false, reloadOnChange: false);
+            //})
             .ConfigureWebHostDefaults(webBuilder =>
             {
                 webBuilder.UseStartup<Startup>();

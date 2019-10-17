@@ -18,15 +18,24 @@ namespace NoStartup
                 {
                     webBuilder.Configure(configureApp =>
                     {
-                        configureApp.UseRouting();
-                        configureApp.UseEndpoints(endpoints =>
+                        //configureApp.UseRouting();
+                        configureApp.UseEndpoints(endpoints => 
                         {
-                            endpoints.MapGet("/", async context =>
+                            endpoints.MapGet("/test", context =>
                             {
-                                await context.Response.WriteAsync("Hello World!");
+                                return context.Response.WriteAsync("Hello Oponeo!");
                             });
+
+                            endpoints.MapGet("/abc", async context =>
+                            {
+                                await context.Response.WriteAsync("ABC!");
+                            });
+
+
                         });
-                    });
+
+                    configureApp.Use((context, midd) => context.Response.WriteAsync("TEST"));
+                });
                 });
     }
 }
