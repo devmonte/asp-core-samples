@@ -26,10 +26,32 @@ namespace Binding.Controllers
             return View();
         }
 
-        [HttpPost(Name = "Example")]
-        public string ExamplePost([FromForm] ExampleModel exampleModel)
+        public string ExamplePost(ExampleModel exampleModel)
         {
             return exampleModel.ExampleString;
+        }
+
+        [HttpPost]
+        public string Test([FromForm] ExampleModel exampleModel)
+        {
+            return exampleModel.ExampleString;
+        }
+
+        public string QueryBinding(int num, string name)
+        {
+            return $"{num}  {name}";
+        }
+
+        [HttpGet("{id}")]
+        public string UrlAndQuery(int id, string name)
+        {
+            return $"{id}  {name}";
+        }
+
+        [HttpGet("{name}/{id}")] 
+        public string UrlAndUrl(string name, int id)
+        {
+            return $"{id}  {name}";
         }
     }
 }

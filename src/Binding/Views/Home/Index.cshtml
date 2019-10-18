@@ -9,7 +9,7 @@
 </div>
 
 
-<form asp-route="Example" method="post">
+<form asp-controller="Home" asp-action="ExamplePost" method="post">
     <p>Simple form for model binding</p>
     Int: <input type="number" asp-for="ExampleInt" />
     String: <input type="text" asp-for="ExampleString" />
@@ -17,3 +17,18 @@
 
     <button  type="submit">Send</button>
 </form>
+
+
+_________
+
+
+<form asp-controller="Home" asp-action="Test" method="post">
+    <p>Simple form for model binding</p>
+    Int: <input type="number" asp-for="ExampleInt" />
+    String: <input type="text" asp-for="ExampleString" />
+    DateTime: <input type="datetime-local" asp-for="ExampleDate" />
+
+    <button type="submit">Send</button>
+</form>
+
+
