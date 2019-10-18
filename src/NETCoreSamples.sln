@@ -36,7 +36,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NoStartup", "NoStartup\NoSt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OptionsPattern", "OptionsPattern\OptionsPattern.csproj", "{E99F796E-3C23-4986-A660-7A12E4617247}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Routing", "Routing\Routing.csproj", "{5B4799CE-0DEC-435F-B4B7-7440E4C8FD1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Routing", "Routing\Routing.csproj", "{5B4799CE-0DEC-435F-B4B7-7440E4C8FD1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Binding", "Binding\Binding.csproj", "{FE248A32-5EC6-44DA-A81E-B4A286230705}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -96,6 +98,10 @@ Global
 		{5B4799CE-0DEC-435F-B4B7-7440E4C8FD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B4799CE-0DEC-435F-B4B7-7440E4C8FD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B4799CE-0DEC-435F-B4B7-7440E4C8FD1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE248A32-5EC6-44DA-A81E-B4A286230705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE248A32-5EC6-44DA-A81E-B4A286230705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE248A32-5EC6-44DA-A81E-B4A286230705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE248A32-5EC6-44DA-A81E-B4A286230705}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -109,6 +115,7 @@ Global
 		{92D016A8-D81A-4248-A406-8F8BFA759E53} = {713AA1B8-92AE-41C9-86B1-4482F424940F}
 		{E99F796E-3C23-4986-A660-7A12E4617247} = {713AA1B8-92AE-41C9-86B1-4482F424940F}
 		{5B4799CE-0DEC-435F-B4B7-7440E4C8FD1F} = {713AA1B8-92AE-41C9-86B1-4482F424940F}
+		{FE248A32-5EC6-44DA-A81E-B4A286230705} = {713AA1B8-92AE-41C9-86B1-4482F424940F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {796D12AD-B2F7-458D-A98E-245B8F1EB363}
