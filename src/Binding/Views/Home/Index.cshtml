@@ -10,7 +10,7 @@
 
 
 <form asp-controller="Home" asp-action="ExamplePost" method="post">
-    <p>Simple form for model binding</p>
+    <p>Simple form for IMPLICIT model binding</p>
     Int: <input type="number" asp-for="ExampleInt" />
     String: <input type="text" asp-for="ExampleString" />
     DateTime: <input type="datetime-local" asp-for="ExampleDate" />
@@ -23,7 +23,7 @@ _________
 
 
 <form asp-controller="Home" asp-action="Test" method="post">
-    <p>Simple form for model binding</p>
+    <p>Simple form for EXPLICIT model binding</p>
     Int: <input type="number" asp-for="ExampleInt" />
     String: <input type="text" asp-for="ExampleString" />
     DateTime: <input type="datetime-local" asp-for="ExampleDate" />

@@ -1,0 +1,15 @@
+﻿@if ((bool) ViewBag.IsMonday)
+{
+    <p>We have monday today :( !</p>
+}
+else
+{
+    <p>We have no monday today :)) !</p>
+}
+
+@{
+    var student = (Student)ViewBag.Student;
+    student ??= new Student {Name = "Test"};
+}
+
+<p>Student name is @student.Name</p>
