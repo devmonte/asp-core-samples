@@ -13,7 +13,7 @@ namespace Binding.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        [BindProperty]
+        [BindProperty(Name = "prop", SupportsGet = true)]
         public int ExampleProperty { get; set; }
 
         public HomeController(ILogger<HomeController> logger)
@@ -26,7 +26,7 @@ namespace Binding.Controllers
             return View();
         }
 
-        public string ExamplePost(ExampleModel exampleModel)
+        public string ExamplePost([Bind("ExampleInt, ExampleString")]ExampleModel exampleModel)
         {
             return exampleModel.ExampleString;
         }
@@ -42,7 +42,7 @@ namespace Binding.Controllers
             return $"{num}  {name}";
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}")] //https://localhost:44373/5?name=test&prop=666
         public string UrlAndQuery(int id, string name)
         {
             return $"{id}  {name}";
