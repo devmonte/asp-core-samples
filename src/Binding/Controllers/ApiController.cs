@@ -17,7 +17,7 @@ namespace Binding.Controllers
             return $"{id}  {name}";
         }
 
-        [HttpGet("{name}/{id}")]
+        [HttpGet("{name}/{id}")]    
         public string UrlAndUrl(string name, int id)
         {
             return $"{id}  {name}";

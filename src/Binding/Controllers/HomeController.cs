@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Binding.Models;
+using Binding.Services;
 
 namespace Binding.Controllers
 {
@@ -21,8 +22,9 @@ namespace Binding.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index([FromServices] IExampleService exampleService)
         {
+            var value = exampleService.GetExampleValue();
             return View();
         }
 
