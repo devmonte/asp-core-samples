@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model Student
+
+<form class="form-group" asp-controller="Home" asp-action="Edit" method="post">
+    <label asp-for="Name"></label>
+    <input asp-for="Name" />
+    <span asp-validation-for="Name"></span>
+
+    <label asp-for="City"></label>
+    <input asp-for="City" />
+    <span asp-validation-for="City"></span>
+
+    <label asp-for="Age"></label>
+    <input asp-for="Age" />
+    <span asp-validation-for="Age"></span>
+
+    <label asp-for="BirthYear"></label>
+    <input asp-for="BirthYear" />
+    <span asp-validation-for="BirthYear"></span>
+    <button type="submit">Edit</button>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
