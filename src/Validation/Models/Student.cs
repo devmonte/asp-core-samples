@@ -9,7 +9,7 @@ namespace Validation.Models
     public class Student
     {
         [Required]
-        [StringLength(50, MinimumLength = 5, ErrorMessage = "Too long name!")]
+        [StringLength(50, MinimumLength = 5, ErrorMessage = "Ups... try again! :)")]
         public string Name { get; set; }
         
         public string City { get; set; }
