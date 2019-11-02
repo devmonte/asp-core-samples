@@ -6,14 +6,13 @@ List of usefull(atleast for me :) ) ASP.NET Core 3.0 samples:
 	- [Docs about writing custom middleware](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/middleware/write?view=aspnetcore-3.0)
 - DI
 	- [Docs about DI](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.0)
+- Action Filters 
+	- [Docs about Action filters](https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/filters?view=aspnetcore-3.0)
+	- [Great post by ANdrew Lock about action filters](https://andrewlock.net/asp-net-core-in-action-filters/)
+- Generic Host
+	- [Docs about Generic Host]()
 
-Not updated yet to .NET Core 3.0:
-- authorization handler
-- MVC filtering
-- generic host
-
-
-Usefull links:
+Generally usefull links:
 - [Centralized exception handling](https://www.strathweb.com/2018/07/centralized-exception-handling-and-request-validation-in-asp-net-core)
 
 
