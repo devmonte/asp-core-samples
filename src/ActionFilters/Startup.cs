@@ -1,11 +1,12 @@
-﻿using LoggingMiddleware.Helpers;
+using ActionFilters.Filters;
+using ActionFilters.Filters.Order;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace LoggingMiddleware
+namespace ActionFilters
 {
     public class Startup
     {
@@ -19,7 +20,13 @@ namespace LoggingMiddleware
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddControllersWithViews(configure => { configure.Filters.Add<ExampleAsyncActionFilter>(); });
+
+            services.AddScoped<ExampleOrderActionFilter>();
+            services.AddScoped<ExampleOrderAuthFilter>();
+            services.AddScoped<ExampleOrderExceptionFilter>();
+            services.AddScoped<ExampleOrderResourceFilter>();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -30,13 +37,24 @@ namespace LoggingMiddleware
                 app.UseDeveloperExceptionPage();
             }
             else
-                {
+            {
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-
             app.UseHttpsRedirection();
-            app.UseMiddleware<DetailedLoggingMiddleware>();
-            app.UseMvc();
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }

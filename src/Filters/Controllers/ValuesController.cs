@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Filters.Filters;
+using Filters.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Filters.Controllers
@@ -12,36 +13,26 @@ namespace Filters.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        [ServiceFilter(typeof(ValueFilter))]
+        public IEnumerable<Student> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new Student[]
+            {
+                new Student { Age = 34 }, 
+                new Student { Age = 35 },
+                new Student { Age = 36 },
+                new Student { Age = 37 },
+                new Student { Age = 25 },
+                new Student { Age = 22 }
+            };
         }
 
-        // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
         {
             return "value";
         }
 
-        // POST api/values
-        [HttpPost]
-        public void Post([FromBody] string value)
-        {
-        }
-
-        // PUT api/values/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
-        {
-        }
-
-        // DELETE api/values/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
     }
 }

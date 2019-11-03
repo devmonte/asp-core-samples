@@ -5,7 +5,6 @@ using System;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http.Internal;
 
 namespace LoggingMiddleware.Helpers
 {
@@ -58,8 +57,8 @@ namespace LoggingMiddleware.Helpers
 
         private async Task<string> FormatRequest(HttpRequest request)
         {
-            request.EnableRewind();
-
+            //request.EnableRewind(); todo resolve this in future
+ 
             var buffer = new byte[Convert.ToInt32(request.ContentLength)];
 
             await request.Body.ReadAsync(buffer, 0, buffer.Length).ConfigureAwait(false);
