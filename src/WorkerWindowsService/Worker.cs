@@ -22,6 +22,8 @@ namespace WorkerWindowsService
             while (!stoppingToken.IsCancellationRequested)
             {
                 _logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                _logger.LogWarning("Worker running at: {time}", DateTimeOffset.Now);
+                _logger.LogError("Worker running at: {time}", DateTimeOffset.Now);
                 await Task.Delay(5000, stoppingToken);
             }
         }
