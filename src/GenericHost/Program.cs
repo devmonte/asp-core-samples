@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Hosting;
 using System;
 using System.Threading.Tasks;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace GenericHost
 {
@@ -8,7 +9,13 @@ namespace GenericHost
     {
         static async Task Main(string[] args)
         {
-            var host = new HostBuilder()
+            var defaultBuilder = Host.CreateDefaultBuilder();
+
+            var host = defaultBuilder
+                .ConfigureServices((context, collection) =>
+                    {
+                        collection.AddHostedService<ExampleHostedService>();
+                    })
                 .Build();
 
             await host.RunAsync();
