@@ -58,7 +58,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUT.Tests", "SUT.Tests\SUT.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SUT.IntegrationTests", "SUT.IntegrationTests\SUT.IntegrationTests.csproj", "{3C37E0BD-A3B5-48FB-84F8-B9EC065B25F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorkerWindowsService", "WorkerWindowsService\WorkerWindowsService.csproj", "{F0DDE42E-8657-4D4A-A22B-B099A4FE63A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorkerWindowsService", "WorkerWindowsService\WorkerWindowsService.csproj", "{F0DDE42E-8657-4D4A-A22B-B099A4FE63A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo", "Demo\Demo.csproj", "{A311C7DB-1C79-42A2-B52F-AA9A93BADE6E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -154,6 +156,10 @@ Global
 		{F0DDE42E-8657-4D4A-A22B-B099A4FE63A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F0DDE42E-8657-4D4A-A22B-B099A4FE63A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F0DDE42E-8657-4D4A-A22B-B099A4FE63A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A311C7DB-1C79-42A2-B52F-AA9A93BADE6E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A311C7DB-1C79-42A2-B52F-AA9A93BADE6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A311C7DB-1C79-42A2-B52F-AA9A93BADE6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A311C7DB-1C79-42A2-B52F-AA9A93BADE6E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -181,6 +187,7 @@ Global
 		{7316C53C-499A-407D-8D1D-241516485829} = {619E13DC-FD6E-4779-B171-8B82C73877E2}
 		{3C37E0BD-A3B5-48FB-84F8-B9EC065B25F2} = {619E13DC-FD6E-4779-B171-8B82C73877E2}
 		{F0DDE42E-8657-4D4A-A22B-B099A4FE63A7} = {D2696B15-F92C-418E-A590-82F113C93D42}
+		{A311C7DB-1C79-42A2-B52F-AA9A93BADE6E} = {D2696B15-F92C-418E-A590-82F113C93D42}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {796D12AD-B2F7-458D-A98E-245B8F1EB363}
