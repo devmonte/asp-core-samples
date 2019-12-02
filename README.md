@@ -12,19 +12,21 @@ List of usefull(atleast for me :) ) ASP.NET Core 3.0 samples:
 - Generic Host
 	- [Docs about Generic Host]()
 
+
+
+
+- Blazor
+  - Blazor Server
+      - [Docs](https://docs.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-3.0#blazor-server)
+  - Blazor WebAssembly
+      - [Docs](https://docs.microsoft.com/en-us/aspnet/core/blazor/hosting-models?view=aspnetcore-3.0#blazor-webassembly)
+
 Generally usefull links:
 - [Centralized exception handling](https://www.strathweb.com/2018/07/centralized-exception-handling-and-request-validation-in-asp-net-core)
 
 
-
 To Do:
-- ~~logging middleware~~
-- ~~authorization handler~~
 - Key Vault integration
-- ~~MVC filtering~~
-- some app initialization logging
-- hosted service
-- ~~generic host~~
 - Third-Party DI container
 - Health-checks
 
